@@ -1,2 +1,5 @@
-# gionicornea.github.io
-This is my CV
+# Gioni's CV
+
+## Live link
+
+[gionicornea.github.io](https://gionicornea.github.io/)
