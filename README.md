@@ -1,2 +1,2 @@
-# gionicornea.github.io
+# Gioni's CV
 This is my CV
