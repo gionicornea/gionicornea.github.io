@@ -1,5 +1,3 @@
-# Gioni's CV
+# gionicornea.github.io
 
-## Live link
-
-[gionicornea.github.io](https://gionicornea.github.io/)
+https://gionicornea.github.io/
