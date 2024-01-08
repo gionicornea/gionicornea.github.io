@@ -35,6 +35,7 @@ function showLanguagesPage() {
 }
 
 showHomePage();
+initEvents();
 
 var homeLink = document.querySelectorAll("#top-menu-bar a")[0];
 homeLink.addEventListener("click", showHomePage);
@@ -47,3 +48,7 @@ projectsLink.addEventListener("click", showProjectsPage);
 
 var languagesLink = document.querySelectorAll("#top-menu-bar a")[3];
 languagesLink.addEventListener("click", showLanguagesPage);
+
+function initEvents() {
+  console.info("click pe link");
+}
