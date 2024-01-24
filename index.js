@@ -1,54 +1,34 @@
+var activePage = "home";
+
 function hide(id) {
+  console.info("hide", id);
   document.getElementById(id).style.display = "none";
 }
 
 function show(id) {
-  document.getElementById(id).style.display = "block";
+  console.info("show", id);
+  var page = document.getElementById(id);
+  console.debug("show page", page);
+  page.style.display = "block";
 }
 
-function showHomePage() {
-  hide("skills");
-  hide("projects");
-  hide("languages");
-  show("home");
+function showPage(id) {
+  console.info("show page", id);
+  hide(activePage);
+  show(id);
+  activePage = id;
 }
-
-function showSkillsPage() {
-  hide("home");
-  hide("projects");
-  hide("languages");
-  show("skills");
-}
-
-function showProjectsPage() {
-  hide("home");
-  hide("skills");
-  hide("languages");
-  show("projects");
-}
-
-function showLanguagesPage() {
-  hide("home");
-  hide("skills");
-  hide("projects");
-  show("languages");
-}
-
-showHomePage();
-initEvents();
-
-var homeLink = document.querySelectorAll("#top-menu-bar a")[0];
-homeLink.addEventListener("click", showHomePage);
-
-var skillsLink = document.querySelectorAll("#top-menu-bar a")[1];
-skillsLink.addEventListener("click", showSkillsPage);
-
-var projectsLink = document.querySelectorAll("#top-menu-bar a")[2];
-projectsLink.addEventListener("click", showProjectsPage);
-
-var languagesLink = document.querySelectorAll("#top-menu-bar a")[3];
-languagesLink.addEventListener("click", showLanguagesPage);
 
 function initEvents() {
-  console.info("click pe link");
+  var toolbar = document.querySelector("#top-menu-bar");
+  toolbar.addEventListener("click", function (e) {
+    if (e.target.matches("a")) {
+      var page = e.target.innerHTML.toLowerCase();
+      console.warn("event", page);
+      showPage(page);
+    }
+  });
 }
+//executii
+showPage(activePage);
+initEvents();
