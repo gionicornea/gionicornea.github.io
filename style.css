@@ -148,3 +148,7 @@ footer a {
 .page {
   display: none;
 }
+
+#skills li span {
+  color: red;
+}
